@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syinka Angga Pramudia - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- Project Detail Modal -->
+    <div id="projectModal" class="modal-wrapper">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></span>
+            <h3 id="modalTitle">Project Title</h3>
+            <p id="modalDesc">Deskripsi pekerjaan akan muncul di sini.</p>
+            
+            <div class="modal-gallery">
+                <div class="gallery-item bg-dark"><img id="modalImg1" src="" alt="Dokumentasi 1"></div>
+                <div class="gallery-item bg-dark"><img id="modalImg2" src="" alt="Dokumentasi 2"></div>
+                <div class="gallery-item bg-dark"><img id="modalImg3" src="" alt="Dokumentasi 3"></div>
+            </div>
+        </div>
+    </div>
+<body>
+
+    <!-- Layar Loading -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-content">
+            <h2>Syinka Angga Pramudia</h2>
+            <p>PORTFOLIO LOADING</p>
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">PORTFOLIO.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+        </ul>
+        <div class="nav-actions">
+            <i class="fa-regular fa-sun"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Syinka Angga Pramudia</h1>
+            <h2 class="typing-text"><span id="typewriter"></span><span class="cursor">|</span></h2>
+            <p>Saya Syinka Angga Pramudia atau lebih sering dipanggil Angga adalah Pribadi yang disiplin dan bertanggung jawab, memiliki kemampuan beradaptasi dengan lingkungan kerja baru serta cepat
+memahami hal-hal baru. Memiliki pengalaman di bidang teknisi lapangan, cleaning service, dan petugas penunjang produksi.
+Terbiasa mengikuti arahan serta prosedur kerja, dan mampu bekerja secara mandiri maupun dalam tim. </p>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="Syinka Angga Pramudia_CV.pdf" download="Syinka Angga Pramudia_CV" class="btn btn-outline">Download CV <i class="fa-solid fa-download"></i></a>
+            </div>
+
+            <div class="social-connect">
+                <span>CONNECT</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <!-- Ganti src dengan foto Anda -->
+            <img src="SULI.jpeg" alt="Foto Aldo" class="image-placeholder" style="object-fit: cover;">
+            
+           
+    </section>
+
+  <!-- About Section -->
+    <section id="about" class="about reveal">
+        <!-- Hapus <h2 class="section-title">About Me</h2> jika Anda memang tidak ingin ada teks About Me di atasnya -->
+        <div class="about-grid">
+            
+            <!-- FOTO ANDA DI KIRI -->
+            <div class="about-image">
+                <!-- Pastikan nama file "ALDO FOTO.jpeg" sesuai dengan file Anda -->
+                <img src="2.jpeg" alt="Foto Aldo Pratama Putra" class="profile-pic-large">
+            </div>
+            
+          <!-- TEKS DI KANAN -->
+            <div class="about-text">
+                <div class="about-desc-full">
+                    <h3 class="title-large">MY EDUCATION</h3>
+                    
+                    <!-- TEMPLATE LOGO INSTANSI KECIL -->
+                                <div class="education-logo-wrapper">
+                        <!-- Ganti src dengan file logo Anda (misal: logo-polinema.png) -->
+                        <img src="sma-5.webp" alt="Logo Instansi" class="small-inst-logo">
+                        <div class="education-inst-info">
+                            <h4>SMA NEGERI 5 KEDIRI</h4>
+                            <h5>MIPA</h5>
+                            <p class="gpa">GPA: 81.00</p>
+                            <p class="years">[2016 - 2019]</p>
+                        </div>
+                    </div>
+
+                    <p class="desc-large">Selama menempuh pendidikan di SMAN 5 Kediri saya mempelajari semua pelajaran dasar di bindang akademi, untuk lebih spesifiknya di bidang Matematika dan IPA, saya juga aktif menjadi anggota osis semasa sekolah dan turut melancarkan acara" yang di adakan di sekolah terutama membantu sesi dokumentasi dan hubungan siswa.</p>
+                </div>
+                
+                <div class="personal-details">
+                    <h3>Personal Details</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span class="label">NAME</span>
+                            <span class="value">Syinka Angga Pramudia</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">LOCATION</span>
+                            <span class="value">Kabupaten Kediri, Jawa Timur</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">EDUCATION</span>
+                            <span class="value">SMAN 5 KEDIRI</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">DEGREE</span>
+                            <span class="value">MATEMATIKA & IPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience reveal">
+        <h2 class="section-title">Education History</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">2007 - 2013</span>
+                    <h3>Sekolah Dasar Negeri 3 Baamang Hilir</h3>
+                    <h4>Kota Waringin Timur - Kalteng</h4>
+                     <p>Aktif mengikuti ekstrakulikuler keolahragaan, mengikuti lomba lomba tingkat kota dan aktif dalam event drumband sekolah hingga provinsi.</p>
+                    <div class="tags">
+                      </div>
+
+            </div>
+        <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">2013 - 2016</span>
+                    <h3>Sekolah Menengah Pertama Negeri 1 Semen</h3>
+                    <h4>Kediri</h4>                  
+                    <p>Mengikuti berbaga perlombaan keolahragaan dan aktif dalam akademik.</p>
+                    <div class="tags">
+                                    </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">2016 - 2019</span>
+                    <h3>Sekolah Menengah Atas Negeri 5</h3>
+                    <h4>Matematikan & Ilmu Pengetahuan Alam / Kota Kediri</h4>
+                    <p>Mengikuti berbagai event Futsal dan Sepak Bola antar SMA,Aktif menjadi anggota Osis dan turut melancarkan acara yang diadakan oleh SMA.<p>
+                    <div class="tags">
+                                    </div>
+                   </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+   <!-- Tech Stack Section -->
+    <section id="skills" class="skills reveal">
+        <h2 class="section-title">My Skills</h2>
+        
+        <div class="skills-split-container">
+            <!-- SISI KIRI: HARD SKILLS -->
+            <div class="skills-column">
+                <h3 class="skills-subtitle"><i class="fa-solid fa-code"></i> Hard Skills</h3>
+                <div class="skill-grid-split">
+                    <div class="skill-box"><i class="fa-solid fa-wifi"></i> Instalasi Jaringan Wifi</div>
+                    <div class="skill-box"><i class="fa-solid fa-microchip"></i> Setting Router dan Modem</div>
+                    <div class="skill-box"><i class="fa-solid fa-triangle-exclamation"></i> troubleshooting Jaringan</div>
+                    <div class="skill-box"><i class="fa-solid fa-toolbox"></i> Maintenance </div>
+                    <div class="skill-box"><i class="fa-solid fa-clipboard-check"></i> Quality Control</div>
+                    <div class="skill-box"><i class="fa-solid fa-users"></i> Memahami Standar K3 </div>
+                </div>
+            </div>
+
+            <!-- GARIS PEMISAH DI TENGAH -->
+            <div class="skills-divider"></div>
+
+            <!-- SISI KANAN: SOFT SKILLS -->
+            <div class="skills-column">
+                <h3 class="skills-subtitle"><i class="fa-solid fa-users"></i> Soft Skills</h3>
+                <div class="skill-grid-split">
+                    <div class="skill-box"><i class="fa-solid fa-comments"></i> Komunikasi Efektif</div>
+                    <div class="skill-box"><i class="fa-solid fa-people-group"></i> Kerja Tim</div>
+                    <div class="skill-box"><i class="fa-solid fa-arrows-rotate"></i> Mudah Beradaptasi</div>
+                    <div class="skill-box"><i class="fa-solid fa-clock"></i> Manajemen Waktu</div>
+                    <div class="skill-box"><i class="fa-solid fa-eye"></i> Teliti dan Cekatan</div>
+                    <div class="skill-box"><i class="fa-solid fa-user-check"></i> Disiplin dan Bertanggung Jawab</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Projects Section -->
+    <section id="projects" class="projects reveal">
+        <h2 class="section-title">My Experience</h2>
+        <div class="project-grid">
+            
+            <!-- KOTAK PROJECT 1 -->
+            <div class="project-card">
+                <img src="Gudang_Garam_logo.svg.png" alt="Cover INKA" class="project-img" style="width: 100%; height: 200px; object-fit: cover;">
+                <div class="project-info">
+                    <h3>PT Gudang Garam tbk.</h3>
+                    <p>saya bertanggung jawab untuk mengawasi sekaligus mensortir barang hasil produksi sebelum di kemas dan di kumpulkan ke gudang untuk stok penjualan.</p>
+                                    </div>
+            </div>
+
+            <!-- KOTAK PROJECT 2 -->
+            <div class="project-card">
+                <img src="Logo-GCI-FIX-150x150.jpg" alt="Cover INKA" class="project-img" style="width: 100%; height: 200px; object-fit: cover;">
+                <div class="project-info">
+                    <h3>PT Go Clean Indonesia - Kediri MALL</h3>
+                    <p>turut ikut serta menjaga kebersihan dan kerapian mall supaya para pelanggan mall merasa nyaman 
+ikut memperlancar proses event yang diadakan di mall pada hari tertentu.</p>
+                                   </div>
+            </div>
+
+            <!-- KOTAK PROJECT 3 -->
+            <div class="project-card">
+                <img src="images.png" alt="Cover INKA" class="project-img" style="width: 100%; height: 200px; object-fit: cover;">
+                <div class="project-info">
+                    <h3>PT Lintas Jaringan Nusantara</h3>
+                    <p>saya berkontribusi memperluar jaringan wifi dari output odp sampai ke rumah pelanggan atau konsumen
+saya juga berkontribusi untuk memudahkan pemasangan dan turut ikut serta menyeting alat" yg terpasang di rumah konsumen atau pelanggan.</p>
+                                   </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-outline">View More Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+    <section id="contact" class="contact reveal">
+        <h2 class="section-title">Contact Me</h2>
+        
+        <div class="contact-container">
+            <p class="contact-subtitle">Mari terhubung! Silakan hubungi saya secara langsung melalui platform di bawah ini.</p>
+            
+            <div class="contact-grid">
+                
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h4>Email</h4>
+                    <p>syinka.ap@gmail.com</p>
+                    <a href="mailto:syinka.ap@gmail.com" class="btn btn-primary btn-sm">Send Email</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <p>0859-3615-3424</p>
+                    <!-- Menggunakan wa.me dengan kode negara 62 -->
+                    <a href="https://wa.me/6285936153424" target="_blank" class="btn btn-primary btn-sm">Chat WA</a>
+                </div>
+
+                
+                <!-- Instagram -->
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <h4>Instagram</h4>
+                    <p>@syinka.ap_</p>
+                    <!-- Ganti link di bawah dengan link Instagram Anda -->
+                    <a href="https://instagram.com/syinka.ap_" target="_blank" class="btn btn-primary btn-sm">Visit Profile</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- JAVASCRIPT UNTUK ANIMASI & CHAT -->
+    <script>
+        // 1. ANIMASI LOADING SCREEN
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('fade-out');
+            }, 1500); // Tampil selama 1.5 detik
+        });
+
+              function typeEffect() {
+            const currentText = textArray[textIndex];
+            
+            if (isDeleting) {
+                typeWriterElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typeWriterElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % textArray.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+        
+        setTimeout(typeEffect, 1600); // Mulai ngetik setelah loading hilang
+
+        // 3. ANIMASI SCROLL REVEAL
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            const revealPoint = 100;
+
+            reveals.forEach(reveal => {
+                const revealTop = reveal.getBoundingClientRect().top;
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // 4. TOGGLE CHATBOT
+        function toggleChat() {
+            const chatWidget = document.getElementById('chatWidget');
+            chatWidget.style.display = chatWidget.style.display === 'flex' ? 'none' : 'flex';
+        }
+        // 5. PROJECT DATA & MODAL LOGIC
+        const projectsData = {
+            project1: {
+                title: "PT Industri Kereta Api (Persero)",
+                desc: "Selama menjalani kegiatan magang di PT Industri Kereta Api (Persero) sebagai Quality Control - Elektrik, saya bertanggung jawab melaksanakan inspeksi kualitas (Quality Control) dan pengujian kelayakan komponen serta sistem kelistrikan internal pada gerbong kereta sesuai dengan standar manufaktur industri. Tugas saya mencakup pelaksanaan inspeksi rutin, preventive maintenance, dan troubleshooting pada sistem otomasi serta jalur kelistrikan gerbong. Selain itu, saya merancang dan memvalidasi diagram jalur kelistrikan (wiring diagram) menggunakan AutoCAD Electrical untuk memastikan kesesuaian dengan spesifikasi teknis operasional, serta melakukan rekapitulasi dan analisis data hasil inspeksi menggunakan Microsoft Excel dan platform berbasis web.",
+                
+                // UBAH BAGIAN INI SESUAI NAMA FILE FOTO ANDA
+                img1: "PKL 1.jpeg", 
+                img2: "PKL 2.jpeg",
+                img3: "PKL 3.jpeg"  
+            },
+            project2: {
+                title: "Penyiraman Bibit Bawang Merah",
+                desc: "Skripsi saya mengembangkan sistem penyiraman tanaman otomatis bertenaga surya (off-grid) untuk lahan pembibitan bawang merah di UD. Bolotani, menggantikan mesin pompa diesel manual berbahan bakar LPG.Sistem ini menggunakan mikrokontroler untuk mengatur penyiraman secara otomatis berdasarkan pembacaan kelembapan tanah dan suhu lingkungan, serta dilengkapi instrumen pemantauan daya baterai LiFePO4 dan debit air.Hasil pengujian menunjukkan sistem dapat panen energi secara efisien melalui panel surya, beroperasi dengan stabil saat menyuplai beban pompa, dan berhasil menekan biaya bahan bakar serta efisiensi tenaga kerja di lapangan.",
+                
+                // UBAH BAGIAN INI SESUAI NAMA FILE FOTO ANDA
+                img1: "SKRIPSI 1.jpeg",
+                img2: "SKRIPSI 2.jpeg",
+                img3: "SKRIPSI 3.jpeg"
+            },
+            project3: {
+                title: "Himpunan Mahasiswa Elektro",
+                desc: "Pada himpunan mahasiswa ini saya beberapa kali mengikuti acara dan kepanitian, salah satunya adalah upgrading staff muda dan skill and creatifity training. Pada beberapa program kerja himpunan, saya diberi tanggung jawab sebagai ketua bidang humas dimana saya akan mengarahkan anggota untuk membentuk komunikasi baik internal dan eksternal kampus.",
+                
+                // UBAH BAGIAN INI SESUAI NAMA FILE FOTO ANDA
+                img1: "SERTIF 1.png",
+                img2: "HME 1.jpeg",
+                img3: "SERTIF 2.png"
+            }
+        };
+
+        function openModal(projectId) {
+            const modal = document.getElementById('projectModal');
+            const data = projectsData[projectId];
+            
+            // Masukkan data ke dalam Modal
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalDesc').textContent = data.desc;
+            
+            // Masukkan gambar dokumentasi
+            document.getElementById('modalImg1').src = data.img1;
+            document.getElementById('modalImg2').src = data.img2;
+            document.getElementById('modalImg3').src = data.img3;
+            
+            // Tampilkan Modal
+            modal.style.display = 'flex';
+            setTimeout(() => modal.classList.add('show'), 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('show');
+            setTimeout(() => modal.style.display = 'none', 300);
+        }
+
+        // Tutup modal jika user menekan area luar kotak modal
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

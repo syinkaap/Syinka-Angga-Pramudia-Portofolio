@@ -1,0 +1,1031 @@
+:root {
+    --bg-color: #ffffff;
+    --text-main: #111111;
+    --text-muted: #666666;
+    --border-color: #eaeaea;
+    --primary: #111111;
+    --radius: 12px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Typography & Utils --- */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+.text-center { text-align: center; }
+.mt-4 { margin-top: 2rem; }
+.bg-dark { background: #222; }
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+}
+.btn-primary:hover {
+    background: #333;
+}
+.btn-outline {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+.btn-outline:hover {
+    border-color: var(--text-main);
+}
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
+
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: var(--text-main);
+}
+.nav-actions {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0 10%;
+    padding-top: 80px;
+}
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+.hero-content p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.social-connect span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+.social-icons a {
+    color: var(--text-main);
+    transition: opacity 0.3s;
+}
+.social-icons a:hover {
+    opacity: 0.6;
+}
+
+.hero-image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.image-placeholder {
+    width: 400px;
+    height: 400px;
+    background: #f0f0f0;
+    border-radius: 50%;
+}
+
+/* Floating Badges di Hero */
+.badge {
+    position: absolute;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.badge-1 { top: 10%; right: 350px; }
+.badge-2 { bottom: 30%; right: 380px; }
+.badge-3 { bottom: 10%; right: 50px; }
+
+/* --- About Section --- */
+.about {
+    padding: 5rem 10%;
+    background-color: #fafafa;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+.image-placeholder-large {
+    width: 100%;
+    height: 500px;
+    background: #eaeaea;
+    border-radius: var(--radius);
+}
+.about-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.about-desc h3, .personal-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.about-desc p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+.personal-details {
+    border-left: 2px solid var(--border-color);
+    padding-left: 2rem;
+}
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+.detail-item .label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+}
+.detail-item .value {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* --- Experience Section --- */
+.experience {
+    padding: 5rem 10%;
+}
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--border-color);
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+.timeline-dot {
+    position: absolute;
+    left: -2.45rem;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    border: 3px solid var(--text-main);
+}
+.timeline-content {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.timeline-content .date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+.timeline-content h3 {
+    font-size: 1.3rem;
+    margin: 0.5rem 0 0.2rem 0;
+}
+.timeline-content h4 {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.timeline-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.tags span {
+    padding: 6px 12px;
+    background: #f4f4f4;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* --- Skills Section --- */
+.skills {
+    padding: 5rem 10%;
+    background: #fafafa;
+}
+.skill-category {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+.category-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.category-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.skill-box i {
+    font-size: 2rem;
+}
+
+/* --- Projects Section --- */
+.projects {
+    padding: 5rem 10%;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: white;
+}
+.project-img {
+    height: 200px;
+    background: #222; 
+}
+.project-info {
+    padding: 1.5rem;
+}
+.project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.project-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    min-height: 60px;
+}
+
+/* --- Contact Section --- */
+.contact {
+    padding: 5rem 10%;
+    background: #fafafa;
+}
+/* --- Styling Bagian Contact Card Direct Link --- */
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+/* Mengumpulkan semua kotak persis di tengah */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 260px); /* Memaksa tepat 2 kotak sejajar (masing-masing 260px) */
+    justify-content: center; /* Menengahkan keseluruhan grid di layar */
+    gap: 2rem; /* Jarak antar kotak kiri-kanan dan atas-bawah */
+    margin: 0 auto;
+}
+
+/* Mengatur ukuran kotak agar pas dan tidak melebar ke pinggir */
+.contact-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Mengikuti lebar kolom (260px) agar seragam */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Sisanya tetap sama seperti sebelumnya */
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #fafafa;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 1.2rem;
+}
+
+.contact-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.contact-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    word-break: break-word; 
+    flex-grow: 1; 
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Penyesuaian Responsif untuk Tablet dan HP */
+@media (max-width: 600px) {
+    .contact-grid {
+        grid-template-columns: 260px; /* Berubah jadi 1 kolom saja di HP */
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom bersusun ke bawah di HP */
+    }
+}
+
+/* --- Chatbot Widget --- */
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: white;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+}
+.chat-widget {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 320px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    display: none; 
+    flex-direction: column;
+    z-index: 1001;
+    overflow: hidden;
+}
+.chat-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.online-status {
+    color: #10b981;
+    font-size: 0.75rem;
+}
+.close-chat {
+    cursor: pointer;
+    color: var(--text-muted);
+}
+.chat-body {
+    padding: 1rem;
+    min-height: 250px;
+    background: #fafafa;
+}
+.chat-bubble {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 12px 12px 12px 0;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    background: white;
+}
+.chat-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+.chat-input button {
+    background: var(--text-main);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+/* =========================================
+   ANIMASI (LOADING, TYPING, SCROLL REVEAL) 
+   ========================================= */
+
+/* Animasi Layar Loading */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+}
+.loader-content {
+    text-align: center;
+}
+.loader-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+.loader-content p {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+.progress-bar {
+    width: 150px;
+    height: 2px;
+    background: var(--border-color);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--text-main);
+    animation: loadProgress 1.5s ease-in-out infinite;
+}
+@keyframes loadProgress {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+.loader-wrapper.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Animasi Efek Typing */
+.typing-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: var(--text-main);
+    margin-left: 2px;
+    animation: blink 0.8s infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Animasi Scroll Reveal (Muncul dari bawah) */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsiveness Standar --- */
+@media (max-width: 768px) {
+    .hero, .about-grid, .skill-category {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .badge { display: none; }
+}
+/* --- Modal (Pop-up) Styling --- */
+.modal-wrapper {
+    display: none; /* Sembunyikan default */
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Background gelap transparan */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.modal-wrapper.show {
+    opacity: 1;
+}
+.modal-content {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+.modal-wrapper.show .modal-content {
+    transform: translateY(0);
+}
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+.close-modal:hover {
+    color: var(--text-main);
+}
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-right: 30px;
+}
+.modal-content p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.modal-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+@media (max-width: 768px) {
+    .modal-gallery {
+        grid-template-columns: 1fr; /* Dokumentasi berjejer ke bawah di HP */
+    }
+}
+/* Styling Baru untuk Education yang Diperbesar */
+.about-desc-full {
+    margin-bottom: 2.5rem;
+    width: 100%; /* Memastikan kontainer memakai seluruh lebar area kanan */
+}
+
+.title-large {
+    font-size: 2rem; /* Ukuran teks diperbesar */
+    font-weight: 800; /* Dibuat lebih tebal agar dominan */
+    letter-spacing: 2px; /* Jarak antar huruf agar terlihat modern & melebar */
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    display: block;
+    width: 100%; /* Memaksa elemen teks meregang ke kanan */
+    border-bottom: 3px solid var(--text-main); /* Menambahkan garis bawah agar meluas ke kanan */
+    padding-bottom: 0.5rem;
+}
+
+
+/* 1. Memperkecil font deskripsi ke ukuran ekstra ringkas (sekitar 12px) */
+.desc-large {
+    font-size: 0.75rem; /* Jauh lebih kecil dari sebelumnya */
+    color: var(--text-muted);
+    line-height: 1.4; /* Jarak antar baris lebih rapat */
+    margin-bottom: 0.8rem; /* Jarak bawah ke Personal Details sangat ditipiskan */
+    text-align: justify;
+}
+
+/* 2. Merapatkan judul Personal Details agar ikut naik */
+.personal-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem; /* Jarak teks 'Personal Details' dengan isinya dirapatkan */
+}
+
+/* 3. Menipiskan jarak antar detail nama, lokasi, dll */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem; /* Jarak antar kotak informasi diperkecil */
+}
+
+.detail-item .label {
+    font-size: 0.7rem; /* Label 'NAME', 'LOCATION' lebih kecil */
+    margin-bottom: 0.1rem;
+}
+
+.detail-item .value {
+    font-size: 0.85rem; /* Ukuran teks isi lebih kecil dan proporsional */
+}
+
+/* 3. Mengurangi jarak kosong di bawah Logo Instansi */
+.education-logo-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1rem; /* Diperkecil (sebelumnya 1.5rem) */
+}
+
+/* 4. (Opsional) Mengurangi jarak di Personal Details agar lebih naik */
+.personal-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem; /* Merapatkan jarak ke daftar namanya */
+}
+
+/* Penyesuaian Responsif untuk Layar Kecil (Mobile) */
+@media (max-width: 768px) {
+    .title-large {
+        font-size: 1.5rem; /* Ukuran sedikit mengecil di HP agar tidak patah berantakan */
+    }
+}
+/* Mengatur Grid menjadi 2 bagian yang seimbang (Kiri Foto, Kanan Teks) */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Mengubah Foto agar persis ukurannya seperti kotak abu-abu sebelumnya */
+.profile-pic-large {
+    width: 100%;
+    height: 500px; /* Tinggi kotak disesuaikan */
+    object-fit: cover; /* Mencegah foto jadi gepeng */
+    border-radius: var(--radius);
+    background-color: #eaeaea; /* Warna dasar jika foto lambat dimuat */
+}
+
+/* Memastikan teks MY EDUCATION dominan dan bergaris bawah */
+.title-large {
+    font-size: 2.5rem; 
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--text-main);
+    display: block;
+    width: 100%;
+    border-bottom: 3px solid var(--text-main); 
+    padding-bottom: 15px; 
+    margin-bottom: 1.5rem; 
+    text-transform: uppercase;
+}
+
+.desc-large {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+/* Responsif untuk pengguna HP */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Jadi atas-bawah di HP */
+    }
+    .profile-pic-large {
+        height: 400px;
+    }
+    .title-large {
+        font-size: 1.8rem;
+    }
+}
+/* --- Styling Template Logo Instansi Kecil --- */
+/* --- Styling Template Logo Instansi & Susunan Teks --- */
+.education-logo-wrapper {
+    display: flex;
+    align-items: flex-start; /* Sejajar dari atas */
+    gap: 1.5rem;
+    margin-bottom: 1.5rem; /* Jarak sebelum paragraf deskripsi */
+}
+
+.small-inst-logo {
+    width: 100px; /* Diperbesar sedikit agar proporsional dengan susunan 4 baris teks */
+    height: 100px;
+    object-fit: contain;
+    background-color: #eaeaea; 
+    border-radius: 8px;
+    display: block;
+    flex-shrink: 0; /* Mencegah logo mengecil jika layar sempit */
+}
+
+.education-inst-info h4 {
+    font-size: 1.3rem;
+    font-weight: 800; /* Ekstra tebal untuk nama kampus */
+    color: var(--text-main);
+    margin: 0 0 0.3rem 0;
+}
+
+.education-inst-info h5 {
+    font-size: 1.2rem;
+    font-weight: 700; /* Bold untuk jurusan */
+    color: var(--text-main);
+    margin: 0 0 0.3rem 0;
+}
+
+.education-inst-info .gpa {
+    font-size: 1.15rem;
+    font-weight: 700; /* Bold untuk GPA */
+    color: var(--text-main);
+    margin: 0 0 0.2rem 0;
+}
+
+.education-inst-info .years {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted); /* Warna sedikit pudar untuk tahun */
+    margin: 0;
+}
+/* --- Penyesuaian Agar Sisi Kanan Lebih Padat & Personal Details Naik --- */
+
+/* 1. Perkecil ukuran logo instansi agar tidak terlalu tinggi */
+.small-inst-logo {
+    width: 70px !important;  /* Diperkecil dari sebelumnya */
+    height: 70px !important;
+}
+
+/* 2. Rapatkan jarak blok logo dan teks kampus */
+.education-logo-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.6rem !important; /* Jarak ke paragraf deskripsi dirapatkan */
+}
+
+.education-inst-info h4 {
+    font-size: 1.1rem !important;
+    margin: 0 0 0.1rem 0 !important;
+}
+
+.education-inst-info h5 {
+    font-size: 1rem !important;
+    margin: 0 0 0.1rem 0 !important;
+}
+
+.education-inst-info .gpa, 
+.education-inst-info .years {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+}
+
+/* 3. Perkecil dan merapatkan teks deskripsi "Selama menempuh..." */
+.desc-large {
+    font-size: 0.72rem !important; /* Ukuran font lebih kecil dan pas */
+    line-height: 1.35 !important;  /* Jarak antar baris rapat */
+    margin-bottom: 0.8rem !important; /* Jarak ke Personal Details sangat dekat */
+    text-align: justify;
+}
+
+/* 4. Naikkan posisi & rapatkan bagian Personal Details */
+.personal-details {
+    margin-top: 0 !important;
+}
+
+.personal-details h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.3rem !important;
+}
+
+.details-grid {
+    gap: 0.4rem !important; /* Merapatkan jarak antar kotak isi detail */
+}
+
+.detail-item .label {
+    font-size: 0.65rem !important;
+    margin-bottom: 0 !important;
+}
+
+.detail-item .value {
+    font-size: 0.8rem !important;
+}
+/* --- Styling Bagian Skills Dibagi 2 (Hard & Soft Skills) --- */
+.skills-split-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.skills-column {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+/* Mengatur Garis Pemisah Vertikal di Tengah */
+.skills-divider {
+    width: 2px;
+    background-color: var(--border-color);
+    align-self: stretch; /* Membuat garis memanjang mengikuti tinggi konten */
+}
+
+.skills-subtitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-subtitle i {
+    color: var(--text-muted);
+}
+
+/* Grid kotak skill untuk masing-masing kolom (2x2) */
+.skill-grid-split {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* Penyesuaian Responsif untuk Tampilan Mobile / HP */
+@media (max-width: 768px) {
+    .skills-split-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .skills-divider {
+        width: 100%;
+        height: 2px; /* Diubah menjadi garis horizontal jika di HP */
+    }
+    .skills-column {
+        padding: 0;
+    }
+}
